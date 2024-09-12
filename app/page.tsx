@@ -10,7 +10,6 @@ export default function Home() {
   const [tasks, setTasks] = useState([]);
   const [completedTasks, setCompletedTasks] = useState([]);
   const [searchInput, setSearchInput] = useState("")
-  const [completedTime, setCompletedTime] = useState("")
 
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -51,7 +50,6 @@ export default function Home() {
         { ...taskToToggle, completed: true, time: `${year}/${month}/${day} ${hours}:${minutes}` },
       ]);
 
-      // setCompletedTime(`${year}/${month}/${day} ${hours}:${minutes}`)
     } 
   };
 
